@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Image from "next/image";
 import { CTA } from "./Utils";
 
-const StyledHome = styled.header`
+const StyledHome = styled.main`
   height: 100vh;
   width: 100vw;
   display: flex;

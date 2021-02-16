@@ -1,6 +1,5 @@
 import * as React from "react";
 import styled from "styled-components";
-// import BackgroundImage from "../media/background.jpg";
 import Image from "next/image";
 
 const StyledBackground = styled.section`
@@ -17,6 +16,19 @@ const StyledBackground = styled.section`
     opacity: 0.3;
     z-index: -1;
   }
+
+  #phone_bkg {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    #phone_bkg {
+      display: block;
+    }
+    #desktop_bkg {
+      display: none;
+    }
+  }
 `;
 
 interface BackgroundProps {}
@@ -25,14 +37,24 @@ export const Background: React.FC<BackgroundProps> = () => {
   return (
     <StyledBackground>
       <div className="dark_layer"></div>
-      <Image
-        src="/background.jpg"
-        layout="intrinsic"
-        alt="Fondo"
-        width={414}
-        height={736}
-        className="background"
-      />
+      <div id="phone_bkg">
+        <Image
+          src="/phone_bkg.jpg"
+          alt="Fondo"
+          layout="fill"
+          objectFit="cover"
+          className="background"
+        />
+      </div>
+      <div id="desktop_bkg">
+        <Image
+          src="/desktop_bkg.jpg"
+          alt="Fondo"
+          layout="fill"
+          objectFit="cover"
+          className="background"
+        />
+      </div>
     </StyledBackground>
   );
 };
