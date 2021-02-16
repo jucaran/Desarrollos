@@ -10,6 +10,7 @@ const StyledHome = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   h1 {
     padding: 1rem 0;

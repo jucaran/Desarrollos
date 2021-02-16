@@ -9,6 +9,8 @@ const StyledNavbar = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 10;
+  overflow: hidden;
 
   display: flex;
   justify-content: space-between;
@@ -16,7 +18,6 @@ const StyledNavbar = styled.nav`
 
   .nav_icon:last-child {
     margin-left: 0.5rem;
-    /* background: pink; */
   }
 
   img {
